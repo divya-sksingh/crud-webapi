@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/ProductsCrudAPI/.vs/ProductsCrudAPI
+/ProductsCrudAPI/ProductsCrud.Model/obj
+/ProductsCrudAPI/ProductsCrudAPI/obj
+/ProductsCrudAPI/.vs/ProjectEvaluation
+/ProductsCrudAPI/ProductsCrud.Model/bin/Debug/net6.0
+/ProductsCrudAPI/ProductsCrudAPI/bin/Debug/net6.0
+/ProductsCrudAPI/TestProject1/bin/Debug/net6.0
+/ProductsCrudAPI/TestProject1/obj
+/ProductsCrud.Api/.vs
+/ProductsCrud.Api/bin/Debug/net6.0
+/ProductsCrud.Api/obj
+/ProductsCrud.Api.Test/bin
+/ProductsCrud.Api.Test/obj
+/ProductsCrud.DataModel/bin/Debug/net6.0
+/ProductsCrud.DataModel/obj

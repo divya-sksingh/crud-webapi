@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProductsCrud.Api</name>
+    </assembly>
+    <members>
+        <member name="M:ProductsCrud.Api.ProductsController.AddNewProduct(ProductsCrud.DataModel.Product)">
+            <summary>
+            Api to create a new product
+            </summary>
+            <param name="product"></param>
+            <returns>Returns an Ok on success</returns>
+            <remarks>
+            ** Sample Request **
+            
+            {
+                "name": "ProductA",
+                "price": 200,
+                "stockQuantity": 50
+            }
+            </remarks>
+        </member>
+        <member name="M:ProductsCrud.Api.ProductsController.GetProducts">
+            <summary>
+            Api to fetch all products
+            </summary>
+            <returns>Returns a List of products</returns>
+        </member>
+        <member name="M:ProductsCrud.Api.ProductsController.GetProductById(System.Int32)">
+            <summary>
+            Api to fetch the product details given its id
+            </summary>
+            <param name="id"></param>
+            <returns>Returns the queried Product</returns>
+        </member>
+        <member name="M:ProductsCrud.Api.ProductsController.UpdateProduct(System.Int32,ProductsCrud.DataModel.Product)">
+            <summary>
+            Api that updates the Product name/quantity/price given its id
+            </summary>
+            <param name="id"></param>
+            <param name="product"></param>
+            <returns>Returns an Ok on success</returns>
+            <remarks>
+             ** Sample Request **
+             
+            {
+                "name": "ProductB",
+                "price": 100,
+                "stockQuantity": 5
+            }
+            </remarks>
+        </member>
+        <member name="M:ProductsCrud.Api.ProductsController.DecrementStock(System.Int32,System.Int32)">
+            <summary>
+             Api to decrement the stock with the quantity provided in the input.
+            </summary>
+            <param name="id"></param>
+            <param name="quantity"></param>
+            <returns>Returns an Ok on success</returns>
+        </member>
+        <member name="M:ProductsCrud.Api.ProductsController.AddToStock(System.Int32,System.Int32)">
+            <summary>
+            Api to add the stock with the quantity provided in the input. 
+            </summary>
+            <param name="id"></param>
+            <param name="quantity"></param>
+            <returns>Returns an Ok on success</returns>
+        </member>
+        <member name="M:ProductsCrud.Api.ProductsController.DeleteProduct(System.Int32)">
+            <summary>
+            Api to delete the product by its id
+            </summary>
+            <param name="id"></param>
+            <returns>Returns an Ok on success</returns>
+        </member>
+        <member name="T:ProductsCrud.Api.IProductRepository">
+            <summary>
+            Defines a repository for managing product-related data operations.
+            </summary>
+        </member>
+        <member name="M:ProductsCrud.Api.IProductRepository.AddProduct(ProductsCrud.DataModel.Product)">
+            <summary>
+            Adds a new product to the repository
+            </summary>
+            <param name="product">The product entity to be added.</param>
+            <returns>A Task representing the asynchronous operation, containing a boolean indicating success or failure.</returns>
+        </member>
+        <member name="M:ProductsCrud.Api.IProductRepository.GetProducts">
+            <summary>
+            Fetches all products from the repository
+            </summary>
+            <returns>A Task representing the asynchronous operation, containing an enumerable collection of products</returns>
+        </member>
+        <member name="M:ProductsCrud.Api.IProductRepository.GetProductById(System.Int32)">
+            <summary>
+            Retrieves a product by its unique id
+            </summary>
+            <param name="id">The unique id of the product.</param>
+            <returns>A Task representing the asynchronous operation, containing the product entity if found, or null otherwise</returns>
+        </member>
+        <member name="M:ProductsCrud.Api.IProductRepository.UpdateProduct(System.Int32,ProductsCrud.DataModel.Product)">
+            <summary>
+            Updates the details of an existing product.
+            </summary>
+            <param name="id">The unique id of the product to be updated.</param>
+            <param name="product">The updated product entity</param>
+            <returns>A Task representing the asynchronous operation, containing a boolean indicating success or failure</returns>
+        </member>
+        <member name="M:ProductsCrud.Api.IProductRepository.IncrementProductStock(System.Int32,System.Int32)">
+            <summary>
+            Increments the stock quantity of a product.
+            </summary>
+            <param name="id">The unique id of the product.</param>
+            <param name="quantity">The quantity to add to the current stock.</param>
+            <returns>A Task representing the asynchronous operation, containing a boolean indicating success or failure</returns>
+        </member>
+        <member name="M:ProductsCrud.Api.IProductRepository.DecrementProductStock(System.Int32,System.Int32)">
+            <summary>
+            Decrements the stock quantity of a product.
+            </summary>
+            <param name="id">The unique id of the product.</param>
+            <param name="quantity">The quantity to subtract from the current stock.</param>
+            <returns>A Task representing the asynchronous operation, containing a boolean indicating success or failure. Returns false if insufficient stock.</returns>
+        </member>
+        <member name="M:ProductsCrud.Api.IProductRepository.DeleteProductById(System.Int32)">
+            <summary>
+            Deletes a product from the repository by its unique identifier.
+            </summary>
+            <param name="id">The unique id of the product to be deleted.</param>
+            <returns>A Task representing the asynchronous operation, containing a boolean indicating success or failure</returns>
+        </member>
+    </members>
+</doc>
